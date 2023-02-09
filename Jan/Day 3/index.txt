@@ -1,0 +1,10 @@
+When shall we use while and do while loop exactly?
+     The do...while statements combo defines a code block to be executed once, and repeated as long as a 
+condition is true.
+    The do...while is used when you want to run a code block at least one time.
+
+    Loops can execute a block of code as long as a specified condition is true.
+    The while loop is used when we do not want to run the loop body even one time before checking the 
+ loop condition.
+
+-------------------------------------------------------------------------------------------------------------
