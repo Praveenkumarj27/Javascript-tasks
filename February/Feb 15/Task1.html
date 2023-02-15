@@ -17,9 +17,11 @@
     var pText = document.querySelector("#para1").textContent;
     var content = pText.split("").join(" ");
     console.log(content);
-    var div = document.createElement("div");
+
     var removeChar = content.replace(/[^a-zA-Z ]/g, "");
     console.log(removeChar);
+    
+    var div = document.createElement("div");
     div.append(removeChar);
     document.body.append(div);
   </script>
