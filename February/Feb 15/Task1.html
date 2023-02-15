@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <div>
+        <p id="para1">Wel@come..</p>
+      </div>
+    </div>
+  </body>
+  <script>
+    var pText = document.querySelector("#para1").textContent;
+    var content = pText.split("").join(" ");
+    console.log(content);
+    var div = document.createElement("div");
+    var removeChar = content.replace(/[^a-zA-Z ]/g, "");
+    console.log(removeChar);
+    div.append(removeChar);
+    document.body.append(div);
+  </script>
+</html>
