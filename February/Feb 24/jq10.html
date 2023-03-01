@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://code.jquery.com/jquery-2.2.4.min.js"
+      integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+      crossorigin="anonymous"
+    ></script>
+    <title>Document</title>
+    <style>
+      .buttonClass {
+        background-color: #008cba;
+        /* Blue */
+        border: none;
+        color: white;
+        padding: 10px 15px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        margin: 4px 2px;
+        cursor: pointer;
+        font-size: 20px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      $(document).ready(function () {
+        $("#btn1").click(function () {
+          $("[title]").css({ color: "red", "font-size": "30px" });
+        });
+
+        $("#btn2").click(function () {
+          $("[title=mytitle]").css({ color: "green", "font-size": "20px" });
+        });
+
+        $("#btn3").click(function () {
+          $("div[title]").css({ color: "yellow", "font-size": "25px" });
+        });
+        $("#btn4").click(function () {
+          $("div[title=mytitle]").css({ color: "yellow", "font-size": "25px" });
+        });
+      });
+    </script>
+
+    <div title="mytitle">My Div 1</div>
+    <div title="mydiv2">My Div 2</div>
+    <div title="title">My Div 1</div>
+    <p title="mytitle">My para 1</p>
+    <p>No title attribute</p>
+
+    <input type="button" class="buttonClass" id="btn1" value="title" />
+    <input type="button" class="buttonClass" id="btn2" value="titleMytitle" />
+    <input type="button" class="buttonClass" id="btn3" value="divTitle" />
+    <input type="button" class="buttonClass" id="btn4" value="divTitleMyTitle"/>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://code.jquery.com/jquery-2.2.4.min.js"
+      integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <script>
+      $(document).ready(function () {
+        $("#btn").click(function () {
+          console.log($("span").length);
+        });
+        $("p span").css({
+          color: "red",
+          "font-size": "40px",
+        });
+      });
+    </script>
+
+    <p><span>Clayfin</span></p>
+    <p><span> Vayana </span></p>
+    <p><div> Vayana 12</div></p>
+    <input type="button" value="Click" id="btn" />
+  </body>
+</html>
+
+
+<!-- 
+Syntax : $(‘TagName')
+$(‘a') // Selects all anchor elements
+$('div p') // Select all paragraph elements that are descendants of div
+$('div, p, span, a') // Selects all div, paragraph, span and anchor elements -->

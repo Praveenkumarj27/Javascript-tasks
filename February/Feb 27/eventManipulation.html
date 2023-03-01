@@ -1,0 +1,65 @@
+<html>
+  <head>
+    <title>jQuery Training jq34</title>
+    <link rel="Fav icon" href="images/favicon.ico" />
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-2.2.4.min.js"
+      integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <style>
+      .buttonClass {
+        background-color: #008cba; /* Blue */
+        border: none;
+        color: white;
+        padding: 10px 15px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        margin: 4px 2px;
+        cursor: pointer;
+        font-size: 20px;
+        font-weight: bold;
+      }
+
+      #container a {
+        display: block;
+      }
+    </style>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $("#container").on("click", "a", function () {
+          var temp = "<a href='#'>" + $(this).html() + "</a>";
+          $("#container").append(temp);
+        });
+        $("#btn1").click(function () {
+          $("#container").off("click");
+        });
+      });
+    </script>
+
+    <div id="myDiv">
+      <p><b>ICC World Cup Teams 2019</b></p>
+
+      <div id="container">
+        <a href="#">India</a>
+        <a href="#">Australia</a>
+        <a href="#">England</a>
+        <a href="#">New Zealand</a>
+        <a href="#">South Africa</a>
+        <a href="#">West Indies</a>
+        <a href="#">Pakistan</a>
+        <a href="#">Bangladesh</a>
+        <a href="#">SriLanka</a>
+        <a href="#">Afghanistan</a>
+      </div>
+    </div>
+
+    <br /><br />
+
+    <input type="button" class="buttonClass" value="off" id="btn1" />
+  </body>
+</html>

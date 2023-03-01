@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://code.jquery.com/jquery-3.6.3.min.js"
+      integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <div id="foo">
+      <h2>The XMLHttpRequest Object</h2>
+      <button type="button" onclick="changeContent()">Change Content</button>
+    </div>
+    <script>
+      function changeContent() {
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function () {
+          if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("foo").innerHTML = this.responseText;
+          }
+        };
+        xhttp.open(
+          "POST",
+          "http://localhost:3000/posts",
+          {
+            id: 6,
+            first_name: "Fred",
+            last_name: "Blair",
+            email: "freddyb34@gmail.com",
+          },
+          true
+        );
+        xhttp.send();
+      }
+    </script>
+  </body>
+</html>

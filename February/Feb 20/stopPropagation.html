@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <h1>Prevent Default</h1>
+
+    <div
+      id="parent"
+      style="
+        height: 50px;
+        width: 200px;
+        background-color: dodgerblue;
+        cursor: pointer;
+      "
+    >
+      I Am parent Element
+      <p
+        id="child"
+        style="height: 50; background-color: coral; cursor: pointer"
+      >
+        I Am Child Element
+      </p>
+    </div>
+  </body>
+  <script>
+    document.getElementById("parent").addEventListener("click", function () {
+      console.log("parent clicked");
+    });
+
+    document.getElementById("child").addEventListener("click", function () {
+      console.log("Child Clicked");
+      //   event.stopPropagation();
+    });
+  </script>
+</html>

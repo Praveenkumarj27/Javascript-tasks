@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .zoom {
+        padding: 50px;
+        transition: transform 2.2s;
+        width: 350px;
+        height: 250px;
+        margin: 100px auto 0 auto;
+        display: flex;
+        align-items: center;
+      }
+
+      .zoom:hover {
+        /* -ms-transform: scale(1.5); 
+        -webkit-transform: scale(1.5);  */
+        transform: scale(1.5);
+      }
+    </style>
+  </head>
+  <body>
+    <img
+      class="zoom"
+      src="https://t3.ftcdn.net/jpg/03/51/15/08/360_F_351150802_VAlf5qCG8jhHdMG75g2EoqHBwV0CSfSo.jpg"
+    />
+  </body>
+</html>

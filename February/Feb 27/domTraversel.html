@@ -1,0 +1,66 @@
+<html>
+  <head>
+    <title>jQuery Training jq33-1</title>
+    <link rel="Fav icon" href="images/favicon.ico" />
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-2.2.4.min.js"
+      integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <style>
+      .buttonClass {
+        background-color: #008cba; /* Blue */
+        border: none;
+        color: white;
+        padding: 10px 15px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        margin: 4px 2px;
+        cursor: pointer;
+        font-size: 20px;
+        font-weight: bold;
+      }
+
+      div.element-row {
+        border-style: dashed;
+        border-color: blue;
+      }
+    </style>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $(".buttonClass").click(function (e) {
+          title = $(e.target).closest(".element-row").find(".title");
+          console.log(title.text());
+        });
+      });
+    </script>
+
+    <div class="element-row">
+      <div class="title-row">
+        <img src="" />
+        <a class="title" href="">Title-1</a>
+      </div>
+      <div class="description-row">
+        <p>Description-1</p>
+        <input type="button" class="buttonClass" value="B1" id="btn1" />
+      </div>
+    </div>
+
+    <div class="element-row">
+      <div class="title-row">
+        <img src="" />
+        <a class="title" href="">Title-2</a>
+      </div>
+      <div class="description-row">
+        <p>Description-2</p>
+        <input type="button" class="buttonClass" value="B2" id="btn2" />
+      </div>
+    </div>
+
+    <br /><br />
+  </body>
+</html>
